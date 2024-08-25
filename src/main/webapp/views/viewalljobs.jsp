@@ -34,7 +34,12 @@
                         <h5 class="card-title">${job.postProfile}</h5>
                         <p class="card-text">${job.postDescription}</p>
                         <p class="card-text"><small class="text-muted">Experience Required: ${job.requiredExperience} years</small></p>
-                        <p class="card-text"><small class="text-muted">Tech Stack: ${job.techStack}</small></p>
+                        <p class="card-text"><small class="text-muted">
+                            Tech Stack:
+                            <ul><c:forEach var="tech" items="${job.techStack}">
+                                <li>${tech}</li>
+                            </c:forEach></ul>
+                        </small></p>
                     </div>
                 </div>
             </c:forEach>
